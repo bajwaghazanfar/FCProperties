@@ -52,6 +52,7 @@ import floorplan from "./StyledComponents/assets/svg/floorplan.svg";
 import marketing from "./StyledComponents/assets/svg/marketing.svg";
 import money from "./StyledComponents/assets/svg/money.svg";
 import free from "./StyledComponents/assets/svg/free.svg";
+import { Helmet } from "react-helmet";
 const SellingPage = () => {
   const SellingPerkWrapper = useRef(null);
   const landingPage = useRef(null);
@@ -71,6 +72,14 @@ const SellingPage = () => {
   });
   return (
     <>
+      <Helmet>
+        <title>Selling|First Choice Properties</title>
+        <meta
+          charSet="utf-8"
+          name="Selling| First Choice Properties"
+          content="Interested in selling your property for the right price? Explore our no sale, no fees package below!"
+        />
+      </Helmet>
       <Navbar />
       <Container>
         <AboutUsWrapper>

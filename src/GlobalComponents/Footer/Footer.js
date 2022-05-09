@@ -35,19 +35,32 @@ export const Routes = styled.h3`
   letter-spacing: 1px;
   cursor: pointer;
 `;
+export const A = styled.a`
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+`;
 
 export const Footer = () => {
   return (
     <FooterContainer>
       <Logo src={colorlogo} />
       <AllRoutesWrapper>
-        <Routes>Home</Routes>
-        <Routes>About us</Routes>
-        <Routes>Buying</Routes>
-        <Routes>Selling</Routes>
-        <Routes>Contact us</Routes>
-        <Routes>Complaints Procedure</Routes>
-        <Routes>Privacy Policy</Routes>
+        <A href="/">
+          <Routes>Home</Routes>
+        </A>
+        <A href="/about-us">
+          <Routes>About us</Routes>
+        </A>
+        <A href="/buying">
+          <Routes>Buying</Routes>
+        </A>
+        <A href="/selling">
+          <Routes>Selling</Routes>
+        </A>
+        <A href="/contact-us">
+          <Routes>Contact Us</Routes>
+        </A>
       </AllRoutesWrapper>
     </FooterContainer>
   );

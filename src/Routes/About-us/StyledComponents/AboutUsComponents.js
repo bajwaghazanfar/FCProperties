@@ -19,7 +19,7 @@ export const AboutUsTitle = styled.h1`
   line-height: 80px;
   color: ${(props) => (props.color ? `${props.color}` : "#d5992f ")};
   @media (min-width: 1400px) and (max-width: 3000px) {
-    font-size: 6rem;
+    font-size: 5rem;
     line-height: 100px;
   }
   @media (max-width: 768px) {
@@ -46,7 +46,7 @@ export const H4 = styled.h4`
   text-align: left;
   color: ${(props) => (props.color ? `${props.color}` : "black")};
   @media (min-width: 1450px) and (max-width: 3000px) {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   @media (max-width: 768px) {
     text-align: center;
@@ -318,10 +318,7 @@ export const Section = styled.div`
     padding: 1rem;
 
     :nth-child(2) {
-      flex-direction: column;
-    }
-    :nth-child(4) {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
   }
 `;
@@ -406,4 +403,53 @@ export const SlideshowDot = styled.img`
   border-radius: 5px;
   cursor: pointer;
   object-fit: cover;
+`;
+export const Redirect = styled.div`
+width:800px;
+  height:400px;
+  padding:2rem;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  justify-content:center;
+  align:items:center;
+  text-align:center;
+   position:relative;
+  opacity:0;
+  left:-20px;
+
+ background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80");
+border-radius:10px;
+cursor:pointer;
+transition: all .5s ease-in-out ;
+:hover{
+  transform:scale(1.05);
+}
+  @media (max-width: 768px) {
+    width:100%;
+    height:auto;
+  }
+
+`;
+export const RedirectHeading = styled.h1`
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: white;
+`;
+export const RedirectDescription = styled.h3`
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+`;
+export const RedirectBtn = styled.button`
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  background: none;
+  outline: none;
+  border: none;
+  background: #d5992f;
+  border-radius: 10px;
+  cursor: pointer;
 `;

@@ -47,6 +47,7 @@ import video from "./StyledComponents/assets/video.svg";
 import help from "./StyledComponents/assets/help.svg";
 import alert from "./StyledComponents/assets/alert.svg";
 import { fadeInAnimation, sectionAnimation } from "./animations";
+import { Helmet } from "react-helmet";
 const BuyingPage = () => {
   const landingPage = useRef(null);
   const section1 = useRef(null);
@@ -62,6 +63,14 @@ const BuyingPage = () => {
   });
   return (
     <>
+      <Helmet>
+        <title>Buying|First Choice Properties</title>
+        <meta
+          charSet="utf-8"
+          name="Buying| First Choice Properties"
+          content="Purchasing a property has never been easier before with First Choice Properties. View our properties for sale, and our packages."
+        />
+      </Helmet>
       <Navbar />
       <Container>
         <AboutUsWrapper>

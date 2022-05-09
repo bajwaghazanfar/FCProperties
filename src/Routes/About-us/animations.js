@@ -46,3 +46,19 @@ export const fadeInSlideshow = (container) => {
     ease: "power3.easeInOut",
   });
 };
+export const fadeInAnimation = (parent) => {
+  gsap.to(parent.current, {
+    opacity: 1,
+    left: "0px",
+    duration: 0.5,
+    ease: "power3.easeInOut",
+    scrollTrigger: {
+      trigger: parent.current,
+      start: "top center",
+      end: " bottom",
+    },
+    stagger: {
+      amount: 1,
+    },
+  });
+};

@@ -18,7 +18,7 @@ export const AboutUsTitle = styled.h1`
   line-height: 80px;
   color: ${(props) => (props.color ? `${props.color}` : "#d5992f ")};
   @media (min-width: 1400px) and (max-width: 3000px) {
-    font-size: 6rem;
+    font-size: 5rem;
     line-height: 100px;
   }
   @media (max-width: 768px) {
@@ -43,9 +43,10 @@ export const H4 = styled.h4`
 
   line-height: 35px;
   color: ${(props) => (props.color ? `${props.color}` : "black")};
+  text-align: left;
   @media (min-width: 1450px) and (max-width: 3000px) {
-    font-size: 2rem;
-    text-align: center;
+    font-size: 1.5rem;
+    text-align: left;
   }
 `;
 export const ColumnDiv = styled.div`

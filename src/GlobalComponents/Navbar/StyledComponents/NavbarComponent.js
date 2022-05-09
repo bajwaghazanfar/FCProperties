@@ -1,11 +1,19 @@
 import styled from "styled-components";
 
-export const H4 = styled.h4`
+export const MobileH4 = styled.h4`
   font-size: 15px;
   color: #d5992f;
   letter-spacing: 1px;
   font-weight: 800;
   text-align: center;
+`;
+export const H4 = styled.h4`
+  font-size: 12px;
+  color: ${(props) => (props.color ? `${props.color}` : "black")};
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 0px;
 `;
 
 export const Container = styled.div`

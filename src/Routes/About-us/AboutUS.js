@@ -30,7 +30,10 @@ import {
   SectionImg,
   CenterAlignWrp,
   ServiceTitle,
-  Slidesh,
+  Redirect,
+  RedirectHeading,
+  RedirectDescription,
+  RedirectBtn,
 } from "./StyledComponents/AboutUsComponents";
 import SlideShowComponent from "./StyledComponents/Slideshow/slideShowComponent";
 import building1 from "./StyledComponents/building1.jpg";
@@ -46,18 +49,20 @@ import {
   fadeInSlideshow,
   landingPageAnimation,
   sectionAnimation,
+  fadeInAnimation,
 } from "./animations";
+import { Helmet } from "react-helmet";
 
 const AboutUs = () => {
   const landingPage = useRef(null);
   const slideShowContainer = useRef(null);
   const section1 = useRef(null);
-  const section2 = useRef(null);
-  const section3 = useRef(null);
+  const redirect = useRef(null);
   useEffect(() => {
     landingPageAnimation(landingPage);
     sectionAnimation(section1);
     fadeInSlideshow(slideShowContainer);
+    fadeInAnimation(redirect);
   });
 
   const images = [
@@ -85,6 +90,14 @@ const AboutUs = () => {
   ];
   return (
     <>
+      <Helmet>
+        <title>Who we are| First Choice Properties</title>
+        <meta
+          charSet="utf-8"
+          name="Who we are| First Choice Properties"
+          content="Interested in learning more about First Choice Properties, our company values and the services we offer. "
+        />
+      </Helmet>
       <Navbar />
       <Container>
         <AboutUsWrapper>
@@ -137,7 +150,26 @@ const AboutUs = () => {
             <SectionImg src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
           </Section>
         </SectionContainer>
-
+        <SectionContainer>
+          <Redirect ref={redirect}>
+            <RedirectHeading style={{ textAlign: "center", fontWeight: "600" }}>
+              Experts in Buying and Selling
+            </RedirectHeading>
+            <RedirectDescription style={{ textAlign: "center" }}>
+              At First Choice properties we are highly experienced in both
+              buying and selling, you can be assured by our extensive portfolio
+              that we can make your own property dealing easy, stress-free and
+              profitable.
+            </RedirectDescription>
+            <CenterAlignWrp>
+              <RedirectBtn>
+                <RedirectDescription>
+                  View our properties on Zoopla
+                </RedirectDescription>
+              </RedirectBtn>
+            </CenterAlignWrp>
+          </Redirect>
+        </SectionContainer>
         <Footer />
       </Container>
     </>

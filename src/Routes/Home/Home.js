@@ -66,7 +66,7 @@ import {
 } from "../../GlobalComponents/Card/PropertyComponent";
 import { Footer } from "../../GlobalComponents/Footer/Footer";
 import city from "./assets/SVG/city.svg";
-import night from "./assets/SVG/night.svg";
+import { Helmet } from "react-helmet";
 import connection from "./assets/SVG/connection.svg";
 import mission from "./assets/SVG/mission.svg";
 import feeling from "./assets/SVG/feeling.svg";
@@ -89,6 +89,14 @@ const Home = () => {
   });
   return (
     <>
+      <Helmet>
+        <meta
+          charSet="utf-8"
+          name="Home| First Choice Properties"
+          content="Interested in finding your dream home, or looking for the suitable price for your home? Explore our services and buying and selling packages below"
+        />
+        <title>Home| First Choice Properties</title>
+      </Helmet>
       <Navbar />
       <Container>
         <LandingPageWrapper>
@@ -154,8 +162,8 @@ const Home = () => {
         </ServiceContainer>
         <FinanceInfoWrapper>
           <FinanceInfo>
-            <H1 color="#d5992f">FREE</H1>
-            <P>Selling with us won't cost you a penny</P>
+            <H1 color="#d5992f">£699</H1>
+            <P>Packages starting from £699</P>
           </FinanceInfo>
           <FinanceInfo>
             <H1 color="#d5992f">10+</H1>
@@ -164,8 +172,8 @@ const Home = () => {
           <FinanceInfo>
             <H1 color="#d5992f">Perks</H1>
             <P>
-              Extra perks when you sign up with us, like a property management
-              portal
+              Extra client priviliges, when you purchase through First Choice
+              Properties
             </P>
           </FinanceInfo>
           <FinanceInfo>

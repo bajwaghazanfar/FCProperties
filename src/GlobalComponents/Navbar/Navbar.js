@@ -27,6 +27,7 @@ import {
   HamburgerMenu,
   Li,
   HamburgerWrapper,
+  MobileH4,
 } from "./StyledComponents/NavbarComponent";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -55,13 +56,13 @@ const Navbar = () => {
             </Row1Section>
             <Row1Section>
               <LocalPhoneIcon style={{ color: "#e7a93d" }} />
-              <H4 color="#d5992f">01212461310</H4>
+              <H4 color="#d5992f">07720588749</H4>
             </Row1Section>
             <Row1Section>
               <LocationOnIcon style={{ fontSize: "30px", color: "#e7a93d" }} />
               <Row1H4Wrapper>
-                <H4 color="#d5992f">68 Coventry Road, Birmingham</H4>
-                <H4 color="#d5992f">01212461310</H4>
+                <H4 color="#d5992f">982 Tyburn Road, Birmingham</H4>
+                <H4 color="#d5992f">07720588749</H4>
               </Row1H4Wrapper>
             </Row1Section>
             <Row1Section>
@@ -115,27 +116,29 @@ const Navbar = () => {
           <HamburgerWrapper>
             <Li>
               <A href="/">
-                <H4 color="black">Home</H4>
+                <MobileH4 color="black">Home</MobileH4>
               </A>
             </Li>
             <Li>
-              <H4 color="black">About us</H4>
+              <A href="/about-us">
+                <MobileH4 color="black">About us</MobileH4>
+              </A>
             </Li>
             <Li>
-              <H4 color="black">Properties</H4>
+              <A href="/buying">
+                <MobileH4 color="black">Buying</MobileH4>
+              </A>
             </Li>
-            <Li>
-              <H4 color="black">Buying</H4>
-            </Li>
-            <Li>
-              <H4 color="black">Selling</H4>
-            </Li>
-            <Li>
-              <H4 color="black">Contact Us</H4>
-            </Li>
-            <Li>
-              <H4 color="black">Privacy Policy</H4>
-            </Li>
+            <A href="/selling">
+              <Li>
+                <MobileH4 color="black">Selling</MobileH4>
+              </Li>
+            </A>
+            <A href="contact-us">
+              <Li>
+                <MobileH4 color="black">Contact Us</MobileH4>
+              </Li>
+            </A>
           </HamburgerWrapper>
         </HamburgerMenu>
       </MobileView>

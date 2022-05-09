@@ -1,52 +1,88 @@
 import styled from "styled-components";
 
+export const H3 = styled.h1`
+  font-size: ${(props) => (props.fontSize ? `${props.fontSize}` : "15px")};
+  font-weight: 400;
+  color: ${(props) => (props.color ? `${props.color}` : "black")};
+`;
 export const Container = styled.div`
   width: 100%;
   height: 100%;
 `;
+export const Span = styled.span`
+  color: #d5992f;
+`;
 export const AboutUsTitle = styled.h1`
   font-size: ${(props) => (props.fontSize ? `${props.fontSize}` : "4.4rem")};
-  font-weight: 400;
-  color: ${(props) => (props.color ? `${props.color}` : "#d5992f")};
-  @media (min-width: 1450px) and (max-width: 3000px) {
-    font-size: 10rem;
+  text-align: left;
+  font-weight: 600;
+  line-height: 80px;
+  color: ${(props) => (props.color ? `${props.color}` : "#d5992f ")};
+  @media (min-width: 1400px) and (max-width: 3000px) {
+    font-size: 5rem;
+    line-height: 100px;
+  }
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+    line-height: 60px;
+    text-align: center;
   }
 `;
 export const ServiceTitle = styled.h1`
-  font-size: ${(props) => (props.fontSize ? `${props.fontSize}` : "20px")};
+  font-size: ${(props) => (props.fontSize ? `${props.fontSize}` : "40px")};
   color: #d5992f;
   letter-spacing: 1px;
   font-weight: 800;
   text-align: center;
   @media (max-width: 768px) {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 `;
 export const H4 = styled.h4`
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 300;
-  text-align: center;
+  text-align: left;
+  line-height: 35px;
+  color: ${(props) => (props.color ? `${props.color}` : "black")};
   @media (min-width: 1450px) and (max-width: 3000px) {
-    font-size: 3rem;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+`;
+export const ColumnDiv = styled.div`
+  width: 100%;
+  height: fit-content;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  @media (max-width: 768px) {
+    justify-content: center;
+    align-items: center;
   }
 `;
 export const AboutUsWrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
 `;
 export const LPContentWrapper = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 50% 50%;
+
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     gap: 0px;
+    height: auto;
   }
 `;
 export const LPContentL = styled.div`
+  padding: 2rem;
   width: 90%;
   height: 100%;
   display: flex;
@@ -55,8 +91,13 @@ export const LPContentL = styled.div`
   justify-content: center;
   text-align: center;
   margin-left: 5rem;
+  position: relative;
+  opacity: 0;
+  left: -20px;
   @media (max-width: 768px) {
     margin-left: 0rem;
+    padding: 1rem;
+    margin-top: 0rem;
   }
 `;
 export const LPContentR = styled.div`
@@ -66,6 +107,9 @@ export const LPContentR = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  opacity: 0;
+  left: -20px;
 `;
 export const LPImgWrapper = styled.div`
   width: 70%;
@@ -77,8 +121,8 @@ export const LPImgWrapper = styled.div`
   align-items: center;
 
   @media (max-width: 768px) {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: auto;
   }
   @media (min-width: 1450px) and (max-width: 3000px) {
     height: 70%;
@@ -90,8 +134,7 @@ export const LPImage = styled.img`
   object-fit: cover;
   border-radius: 5px;
   @media (max-width: 768px) {
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-radius: 10px;
     height: 60%;
   }
 `;
@@ -113,7 +156,6 @@ export const SummaryTextWrp = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-
   &:after {
     content: "";
     margin: 30 px auto 0;
@@ -140,7 +182,6 @@ export const DescriptionWrp = styled.div`
   gap: 40px;
   justify-content: center;
   align-items: center;
-
   @media (max-width: 768px) {
     width: 100%;
     text-align: center;
@@ -233,14 +274,10 @@ export const ContactUsTitle = styled.h1`
     font-size: 2rem;
   }
   @media (min-width: 1450px) and (max-width: 3000px) {
-    font-size: 10rem;
+    font-size: 3rem;
   }
 `;
-export const H3 = styled.h4`
-  font-size: ${(props) => (props.fontSize ? `${props.fontSize}` : "15px")};
-  font-weight: 300;
-  color: ${(props) => (props.color ? `${props.color}` : "#919191")};
-`;
+
 export const InputWrapper = styled.div`
   width: 100%;
   height: auto;
